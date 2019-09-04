@@ -7,10 +7,10 @@ public class JPanel_Exam {
         mainJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainJFrame.setSize(240,240);
         mainJFrame.setLocation(200,200);
-        //Container container=new Container();
-        //container=mainJFrame.getContentPane();
-        mainJFrame.getContentPane().setBackground(Color.lightGray);
-        mainJFrame.getContentPane().setLayout(null);
+        Container container=new Container();
+        container=mainJFrame.getContentPane();
+        container.setBackground(Color.lightGray);
+        container.setLayout(null);
         JPanel pn1=new JPanel();
         pn1.setSize(190,180);
         pn1.setBackground(Color.green);
@@ -21,7 +21,7 @@ public class JPanel_Exam {
         btn.setLocation(10,50);
         pn1.setLayout(null);
         pn1.add(btn);
-        mainJFrame.add(pn1);
+        container.add(pn1);
         mainJFrame.setVisible(true);
     }
 }
