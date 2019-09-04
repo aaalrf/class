@@ -15,7 +15,7 @@ public class JPanel_Exam {
         pn1.setSize(190,180);
         pn1.setBackground(Color.green);
         pn1.setLocation(10,50);
-        JButton btn=new JButton("我是一个按钮，单击我");
+        JButton btn=new JButton("这是一个按钮，请点击");
         btn.setSize(170,40);
         btn.setBackground(Color.yellow);
         btn.setLocation(10,50);
