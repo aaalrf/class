@@ -1,3 +1,3 @@
 public class test {
-    int ti10;
+    int ti20;
 }
