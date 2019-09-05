@@ -88,5 +88,8 @@ public class BankContainer_Exam extends JFrame implements ActionListener{
             mainJFrame.dispose();
             System.exit(0);
         }
+        if(bt==bt_cancel){
+            diag.setVisible(false);
+        }
     }
 }
