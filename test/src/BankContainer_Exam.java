@@ -22,7 +22,7 @@ public class BankContainer_Exam extends JFrame implements ActionListener{
         mainJFrame.setTitle("ABC登陆");
         mainJFrame.setBounds(0,0,420,280);
         mainJFrame.setLocationRelativeTo(null);
-        mainJFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mainJFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         Container container=mainJFrame.getContentPane();
         container.setLayout(null);
         container.add(lbl);
