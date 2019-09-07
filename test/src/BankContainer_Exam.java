@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class BankContainer_Exam extends JFrame implements ActionListener{
+public class BankContainer_Exam extends JFrame{
     static BankContainer_Exam mainJFrame=new BankContainer_Exam();
     static JLabel lbl=new JLabel();
     static JDialog diag=new JDialog(mainJFrame);
@@ -52,8 +52,26 @@ public class BankContainer_Exam extends JFrame implements ActionListener{
         diag.setLayout(new FlowLayout(FlowLayout.CENTER,5,20));
         diag.add(bt_close);
         diag.add(bt_cancel);
-        bt_close.addActionListener(mainJFrame);
-        bt_cancel.addActionListener(mainJFrame);
+        bt_close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton bt=(JButton)e.getSource();
+                if(bt==bt_close){
+                    diag.dispose();
+                    mainJFrame.dispose();
+                    System.exit(0);
+                }
+            }
+        });
+        bt_cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton bt=(JButton)e.getSource();
+                if(bt==bt_cancel){
+                    diag.setVisible(false);
+                }
+            }
+        });
         mainJFrame.addWindowListener(wlist);
         mainJFrame.setVisible(true);
     }
@@ -79,17 +97,6 @@ public class BankContainer_Exam extends JFrame implements ActionListener{
         }
         public void windowClosed(WindowEvent e){
             //空操作
-        }
-    }
-    public void actionPerformed(ActionEvent e){
-        JButton bt=(JButton)e.getSource();
-        if(bt==bt_close){
-            diag.dispose();
-            mainJFrame.dispose();
-            System.exit(0);
-        }
-        if(bt==bt_cancel){
-            diag.setVisible(false);
         }
     }
 }
